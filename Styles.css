@@ -1,0 +1,443 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.subheader{
+  background-image:url("images/background-images/H2x1_NSwitchDS_BaldoTheGuardianOwls_image1280w.jpg");
+  background-size:100% 100% ;
+  background-repeat: no-repeat;
+  background-position: cover  ;
+  
+}
+
+
+a{
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  font-family: ubuntu;
+  padding: 10px;
+  margin: 10px 0; 
+  text-decoration: none;
+}
+
+li{
+  margin: 10px 10px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.container{
+  padding: 0px 40px;
+}
+
+h1{
+ padding: 10px 10px 10px 10px;
+ margin: 10px 10px 10px 1px;
+ display: inline-block;
+ font-size: 50px;
+ font-family: ubuntu;
+ color: rgb(27, 26, 26);
+ border-bottom: 3px solid rgb(27, 26, 26);
+ padding-bottom: 0 ;
+}
+
+h2{
+  padding: 10px;
+  margin: 10px;
+  color: rgb(37, 37, 37);
+  font-family: ubuntu;
+}
+
+
+
+/* Header */
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+ 
+
+.logo{
+  max-height: 50px;
+}
+
+
+.nav-bar a:hover{
+  border-bottom: #000000 solid 3px;
+}
+
+
+.nav-bar ul{
+ display: flex;
+ justify-content: space-between;
+  
+}
+
+label #btn,
+label #cancel{
+  color: black;
+  font-size: 30px;
+  float: right;
+  line-height: 40px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+label #cancel{
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top:9px ;
+} 
+
+@media (max-width: 500px){
+
+  label #btn{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top:9px ;
+  } 
+
+  ul{
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    background-color: #34495e;
+    top: 0px;
+    left: -500px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 50;
+  }
+
+
+  
+  .nav-bar ul{
+    display: block;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    
+  }
+
+  nav ul li a{
+    font-size: large; 
+  }
+
+  #check:checked ~ ul{
+    left:0;
+  }
+
+  #check:checked ~ label #btn{
+    display: none;
+  }  
+
+  #check:checked ~ label #cancel{
+    display: block;
+  }    
+
+
+}
+
+
+
+
+
+/* Showcase */
+.showcase{
+  margin: 200px 0 0 0;
+
+}
+
+.nft-detail-note{
+  color:rgb(0, 0, 0) ;
+  font-size: 30px;
+  font-weight: 700;
+  text-align:left;
+  line-height: 1.6;
+  font-family: ubuntu;
+  padding: 30px 0;
+}
+
+/* About */
+.about{
+  background-image: url("images/background-images/baldo.webp");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-position:contain;
+}
+
+.nft-info-notes{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-weight: 700; 
+  text-align: left;
+  line-height: 1.6;
+  font-family: Ubuntu ;
+  padding-top: 20px;
+  padding-bottom: 70px ;
+}
+.nft-info{
+position: relative;
+}
+
+.nft-info::before,
+.nft-info::after{
+  content: '';
+  position: absolute;
+  height: 80px;
+  padding-bottom: 100px;
+  bottom: -140px;
+  right: 0;
+  left: 0;
+  background:rgb(119, 203, 236);
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+/* OUR NFTS */
+.container.slider{
+  margin-top: 80px;
+  padding-bottom: 50px;
+  background-color: rgb(119, 203, 236);
+  position: relative;
+  
+}
+
+.container.slider::before,
+.container.slider::after{
+  content: '';
+  position: absolute;
+  height: 80px;
+  bottom: -40px;
+  right: 0;
+  left: 0;
+  background:rgb(119, 203, 236);
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg); 
+}
+
+.nft-slider-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subcontainer{
+  margin: auto;
+  width: 100%;
+}
+
+
+.our-nfts{
+  font-family: ubuntu;
+  font-weight: 900;
+  font-size: 30px;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.see-more{
+  background-color: rgb(119, 203, 236);
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px ;
+  font-size: 20px;
+  font-family: ubuntu;
+  padding: 10px;
+  margin: 10px;
+  transform: scale(1);
+}
+
+.previous,
+.next{
+  margin-right: 25px;
+  background-color: rgb(119, 203, 236);
+  border: none;
+}
+.nft-slide{
+  display: inline-block;
+}
+
+.nft-slide-img{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  display: inline-block;
+}
+
+.img-1{
+  background-image: url(" images/nft-images/images.jpg");
+}
+.img-2{
+  background-image: url("images/nft-images/images.jpg");
+}
+.img-3{
+  background-image: url("images/nft-images/images.jpg");
+}
+.img-4{
+  background-image: url("images/nft-images/images.jpg");
+}
+
+.img-5{
+  background-image: url("images/nft-images/images.jpg");
+}
+.img-6{
+  background-image: url("images/nft-images/images.jpg");
+}
+.img-7{
+  background-image: url("images/nft-images/images.jpg");
+}
+
+/* FAQ */
+
+.faq{
+  width: 100%;
+  padding-top: 30px;
+  background-color: hsl(189, 100%, 86%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-header{
+  padding: 10px;
+  margin-top: 30px;
+  font-family: ubuntu;
+  font-size:50px ;
+  font-weight: bolder;
+  border-bottom: 3px solid black;
+}
+
+.container .faq{
+  width:100%;
+  max-width:1280px ;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.faq-item{
+  background-color: rgb(119, 203, 236);
+  border-radius: 6.4px;
+  margin-bottom:16px;
+  padding: 16px;
+  box-shadow: 8px 2px 8px rgba(0,0,0,0.1);
+}
+
+.faq-link{
+  font-size: 26px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
+  background-color: rgb(119, 203, 236);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.faq-link i{
+  color: #000000;
+  padding: 8px;
+  
+}
+
+.faq-link .fa-minus{
+  display: none;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #212838;
+  transition: max-height 650ms;
+} 
+
+.answer::before{
+  content: "";
+  position: absolute;
+  width:9.6px ;
+  height:90%;
+  background-color: rgb(35, 153, 199);
+  top: 50%;
+  left:0 ;
+  transform: translateY(-50%);
+}
+
+.answer p{
+   color: rgb(119, 203, 236);
+   font-size: 22.4px ;
+   padding: 32px;
+}
+
+.faq-item:target .answer{
+  max-height: 320px;
+}
+
+.faq-item:target .faq-link .fa-plus{
+  display: none;
+}
+
+.faq-item:target .faq-link .fa-minus{
+  display: block;
+}
+
+/* footer */
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(119, 203, 236);
+}
+
+.web-name p{
+  padding-left: 10px;
+  font-family: ubuntu;
+  font-size: 20px;
+}
+
+/* Tablet&under*/
+@media (max-width:768px){
+  .showcase{
+    margin-top: 300px;
+  }
+
+}
+
+/*Mobile*/
+@media (max-width:500px){
+  
+
+}
+
+
+
