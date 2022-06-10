@@ -5,7 +5,7 @@
 
 .subheader{
   background-image:url("images/background-images/H2x1_NSwitchDS_BaldoTheGuardianOwls_image1280w.jpg");
-  background-size:100% 100% ;
+  background-size:100% 100%;
   background-repeat: no-repeat;
   background-position: cover  ;
   
@@ -96,9 +96,10 @@ label #cancel{
 
 label #cancel{
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top:9px ;
+  left: 15px;
 } 
 
 @media (max-width: 500px){
